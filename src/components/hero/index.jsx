@@ -2,7 +2,6 @@ const Hero = () => {
   return (
     <div className="bg-[#fafafa] min-h-screen flex items-center pt-[120px] md:pt-[100px]">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-10">
-
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold text-[#09291b] mb-4">
             Welcome to <span className="text-[#8e7d53]">Falco</span> Community
@@ -21,7 +20,7 @@ const Hero = () => {
           <div className="w-full max-w-md md:max-w-lg aspect-video mx-auto rounded-2xl overflow-hidden shadow-lg">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/MXxlafFN6Ew"
+              src="https://www.youtube.com/embed/dC8yyyDbPaI?rel=0&modestbranding=1"
               title="Falco Video"
               frameBorder="0"
               allow="autoplay; encrypted-media; fullscreen; picture-in-picture"

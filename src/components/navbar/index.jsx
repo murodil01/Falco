@@ -15,16 +15,23 @@ const Navbar = () => {
     );
   };
 
-  const getLinkClass = (path) =>
-    `${
-      location.pathname === path ? "text-[#bca87c]" : "text-[#8e7d53]"
-    } hover:text-[#bca87c]"`;
+  const getLinkClass = ({ path = "", hash = "" }) => {
+    const isActive =
+      path && hash
+        ? location.pathname === path && location.hash === hash
+        : hash
+        ? location.hash === hash
+        : location.pathname === path && !location.hash;
+
+    return `${
+      isActive ? "text-[#bca87c]" : "text-[#8e7d53] hover:text-[#bca87c]"
+    }`;
+  };
 
   return (
     <header className="w-full bg-[#09291b] shadow-md fixed top-0 z-50">
       <div className="max-w-[1400px] mx-auto w-full px-4 sm:px-6 lg:px-12">
         <div className="flex justify-between items-center py-[20px]">
-          {/* Logo */}
           <div className="flex items-center gap-3">
             <img
               src={falcotext}
@@ -34,19 +41,22 @@ const Navbar = () => {
           </div>
 
           <nav className="hidden md:flex items-center gap-6 xl:gap-10 font-[700]">
-            <Link to="/" className={getLinkClass("/")}>
+            <Link to="/" className={getLinkClass({ path: "/" })}>
               Home
             </Link>
-            <Link to="/about" className={getLinkClass("/about")}>
+            <Link to="/about" className={getLinkClass({ path: "/about" })}>
               About Us
             </Link>
-            <Link to="/projects" className={getLinkClass("/projects")}>
+            <Link
+              to="/projects"
+              className={getLinkClass({ path: "/projects" })}
+            >
               Projects
             </Link>
             <HashLink
               smooth
               to="/#contact"
-              className="text-[#8e7d53] hover:text-[#bca87c]"
+              className={getLinkClass({ path: "/", hash: "#contact" })}
             >
               Contact Us
             </HashLink>
@@ -78,31 +88,27 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
-            className={`block py-2 font-semibold ${
-              location.pathname === "/" ? "text-[#bca87c]" : "text-gray-700"
-            }`}
+            className={`block py-2 font-semibold ${getLinkClass({
+              path: "/",
+            })}`}
           >
             Home
           </Link>
           <Link
             to="/about"
             onClick={() => setIsOpen(false)}
-            className={`block py-2 font-semibold ${
-              location.pathname === "/about"
-                ? "text-[#bca87c]"
-                : "text-gray-700"
-            }`}
+            className={`block py-2 font-semibold ${getLinkClass({
+              path: "/about",
+            })}`}
           >
             About Us
           </Link>
           <Link
             to="/projects"
             onClick={() => setIsOpen(false)}
-            className={`block py-2 font-semibold ${
-              location.pathname === "/projects"
-                ? "text-[#bca87c]"
-                : "text-gray-700"
-            }`}
+            className={`block py-2 font-semibold ${getLinkClass({
+              path: "/projects",
+            })}`}
           >
             Projects
           </Link>
@@ -110,12 +116,14 @@ const Navbar = () => {
             smooth
             to="/#contact"
             onClick={() => setIsOpen(false)}
-            className="block py-2 font-semibold text-[#8e7d53] hover:text-[#bca87c]"
+            className={`block py-2 font-semibold ${getLinkClass({
+              path: "/",
+              hash: "#contact",
+            })}`}
           >
             Contact Us
           </HashLink>
 
-          {/* Mobile Join Us Button */}
           <button
             onClick={() => {
               setIsOpen(false);
