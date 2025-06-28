@@ -48,7 +48,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <button
               onClick={openModal}
-              className="bg-[#8e7d53] !text-[#09291b] px-4 py-3 rounded-2xl border-2 border-transparent hover:!text-[#8e7d53] hover:border-[#8e7d53] hover:bg-[#09291b] flex items-center gap-2 transition-all duration-200"
+              className="bg-[#8e7d53] !text-[#09291b] px-4 py-2 rounded-2xl border-2 border-transparent hover:!text-[#8e7d53] hover:border-[#8e7d53] hover:bg-[#09291b] flex items-center gap-2 transition-all duration-200"
             >
               <User className="w-4 h-4" /> Register
             </button>
