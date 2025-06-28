@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="w-full max-w-md md:max-w-lg aspect-video mx-auto rounded-2xl overflow-hidden shadow-lg">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/VtHn2_HQ4uY?autoplay=1&mute=1"
+              src="https://www.youtube.com/embed/MXxlafFN6Ew"
               title="Falco Video"
               frameBorder="0"
               allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
