@@ -1,39 +1,39 @@
-
 const cardItems = [
   {
     number: "01",
-    title: "Primus contactus",
-    text: "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum. Morbi fermentum quam nec nunc varius bibendum.",
+    title: "Love to Travel",
+    text: "If you love to travel, FALCO lets you explore new places while working on exciting projects. You’ll meet people from different cultures and learn new things everywhere you go. Turn your adventures into valuable experiences with us.",
     delay: 200,
   },
   {
     number: "02",
-    title: "Quaestio investigatio",
-    text: "Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.",
+    title: "Into IT",
+    text: "Are you curious about technology? At FALCO, you can learn and work with the latest tools and ideas in IT. We help you build real skills and grow your knowledge in a fun, supportive team.",
     delay: 300,
   },
   {
     number: "03",
-    title: "Consilium evolutio",
-    text: "Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue.",
+    title: "Real Work",
+    text: "At FALCO, you won't just study—you'll do real work. You'll join real projects, solve real problems, and see how your ideas make a difference. It's the best way to learn and get experience.",
     delay: 400,
   },
   {
     number: "04",
-    title: "Executio",
-    text: "Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris.",
+    title: "Grow Your Career",
+    text: "We care about your future. At FALCO, you'll find chances to grow your career, learn new things, and reach your goals. Join us and build a path to the job you dream about.",
     delay: 500,
   },
 ];
 
 const WhyUs = () => {
   return (
-    <section id="why-us" className="bg-white py-20">
-      <div className="w-[90%] mx-auto text-center mb-12" data-aos="fade-up">
+    <section id="why-us" className="bg-[#fafafa] py-20">
+      <div className="w-[50%] mx-auto text-center mb-12" data-aos="fade-up">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Us</h2>
         <p className="text-gray-600 text-lg">
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
+          At FALCO, we help people grow by matching their interests and goals
+          with real opportunities. Whether you love travel, technology, hands-on
+          work, or building your career, we're here to support you.
         </p>
       </div>
 
@@ -50,7 +50,7 @@ const WhyUs = () => {
               data-aos="fade-up"
               data-aos-delay={item.delay}
             >
-              <div className="text-blue-600 text-2xl font-bold mb-2">
+              <div className="text-[#8e7d53] text-2xl font-bold mb-2">
                 {item.number}
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">

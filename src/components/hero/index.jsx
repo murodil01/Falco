@@ -12,8 +12,8 @@ const Hero = () => {
             future. Falco is not just a community — it's your launchpad to
             greatness.
           </p>
-          <button className="bg-[#09291b] !text-white w-[220px] h-[55px] px-2 py-3 rounded-2xl hover:bg-[#8e7d53] transition duration-300">
-            Join the Movement
+          <button className="bg-[#09291b] !text-white w-[200px] h-[55px] px-2 py-3 rounded-2xl hover:bg-[#8e7d53] transition duration-300">
+            <a href="#contact">Contact us</a>
           </button>
         </div>
 
