@@ -52,7 +52,7 @@ const Team = () => {
             key={index}
             className="bg-white shadow-md rounded-2xl overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="relative w-full h-[350px]">
+            <div className="relative w-full h-[400px]">
               <img
                 src={member.image}
                 alt={member.name}

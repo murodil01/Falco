@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import falcotext from "../../assets/falcotext.png";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -22,17 +22,18 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-[#09291b] shadow-md fixed top-0 z-50">
-      <div className="w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto w-full px-4 sm:px-6 lg:px-12">
         <div className="flex justify-between items-center py-[20px]">
-          <div className="flex items-center gap-2">
+          {/* Logo */}
+          <div className="flex items-center gap-3">
             <img
               src={falcotext}
               alt="Falco Logo"
-              className="h-6 sm:h-7 md:h-9 lg:h-10 xl:h-12 w-auto"
+              className="max-h-12 w-auto object-contain"
             />
           </div>
 
-          <nav className="hidden md:flex items-center gap-6 font-[700]">
+          <nav className="hidden md:flex items-center gap-6 xl:gap-10 font-[700]">
             <Link to="/" className={getLinkClass("/")}>
               Home
             </Link>
@@ -54,7 +55,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <button
               onClick={handleFormRedirect}
-              className="bg-[#8e7d53] !text-[#09291b] font-[700] px-4 py-2 rounded-2xl border-2 border-transparent hover:!text-[#8e7d53] hover:border-[#8e7d53] hover:bg-[#09291b] flex items-center gap-2 transition-all duration-200"
+              className="bg-[#8e7d53] text-[#09291b] font-[700] px-5 py-2 rounded-2xl border-2 border-transparent hover:text-[#8e7d53] hover:border-[#8e7d53] hover:bg-[#09291b] transition-all duration-200"
             >
               Join Us
             </button>
@@ -114,14 +115,15 @@ const Navbar = () => {
             Contact Us
           </HashLink>
 
+          {/* Mobile Join Us Button */}
           <button
             onClick={() => {
               setIsOpen(false);
               handleFormRedirect();
             }}
-            className="w-full !text-[#8e7d53] bg-[#09291b] mt-3 px-4 py-2 border-2 border-transparent rounded-2xl hover:!text-[#09291b] hover:border-[#8e7d53] hover:bg-[#8e7d53] flex items-center justify-center gap-2"
+            className="w-full text-[#8e7d53] bg-[#09291b] mt-3 px-4 py-2 border-2 border-transparent rounded-2xl hover:text-[#09291b] hover:border-[#8e7d53] hover:bg-[#8e7d53] transition-all duration-200"
           >
-            <User className="w-4 h-4" /> Join Us
+            Join Us
           </button>
         </div>
       )}
