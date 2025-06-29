@@ -23,8 +23,8 @@ const Contacts = () => {
             <MapPin className="w-6 h-6 mt-1 text-[#09291b]" />
             <div>
               <h4 className="font-semibold text-sm">Location</h4>
-              <p className="text-xs">A108 Adam Street</p>
-              <p className="text-xs">New York, NY 535022</p>
+              <a href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7" className="text-xs block">108 Amir Temur Avenue</a>
+              <a href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7" className="text-xs block">Tashkent 100200, Uzbekistan</a>
             </div>
           </div>
 
@@ -32,8 +32,8 @@ const Contacts = () => {
             <Phone className="w-6 h-6 mt-1 text-[#09291b]" />
             <div>
               <h4 className="font-semibold text-sm">Phone</h4>
-              <p className="text-xs">+998 90 808 63 83</p>
-              <p className="text-xs">+998 99 129 26 14</p>
+              <a href="tel:+998908086383" className="text-xs block">+998 90 808 63 83</a>
+              <a href="tel:+998991292614" className="text-xs block">+998 99 129 26 14</a>
             </div>
           </div>
 
@@ -41,8 +41,8 @@ const Contacts = () => {
             <Mail className="w-6 h-6 mt-1 text-[#09291b]" />
             <div>
               <h4 className="font-semibold text-sm">Email</h4>
-              <p className="text-xs">hamrayev-2000@mail.ru</p>
-              <p className="text-xs">fozilruzmamatoz@gmail.com</p>
+              <a href="mailto:hamrayev-2000@mail.ru" className="text-xs block">hamrayev-2000@mail.ru</a>
+              <a href="mailto:fozilruzmamatoz@gmail.com" className="text-xs block">fozilruzmamatoz@gmail.com</a>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Contacts = () => {
             href="https://docs.google.com/forms/d/e/1FAIpQLSf7PQwcD6aIE0QfQXH50TXYuTDFr7jO-yiA7fbaO8anFOfP2g/viewform"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#09291b] text-[#8e7d53] font-semibold px-6 py-3 rounded-xl hover:bg-[#8e7d53] hover:text-[#09291b] transition duration-300"
+            className="bg-[#09291b] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#8e7d53] transition duration-300"
           >
             Contact Form
           </a>
@@ -65,7 +65,7 @@ const Contacts = () => {
             onClick={() => {
               handleFormRedirect();
             }}
-            className="bg-[#09291b] text-[#8e7d53] font-semibold px-9 py-3 rounded-xl hover:bg-[#8e7d53] hover:text-[#09291b] transition duration-300"
+            className="bg-[#09291b] text-white font-semibold px-9 py-3 rounded-xl hover:bg-[#8e7d53] transition duration-300"
           >
             Join Form
           </button>

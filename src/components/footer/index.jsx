@@ -16,14 +16,14 @@ const Footer = () => {
             <div className="w-[80px] mb-4">
               <img src={falcologo} alt="Image" className="w-20 h-auto" />
             </div>
-            <p className="text-sm">108 Amir Temur Avenue</p>
-            <p className="text-sm">Tashkent 100200, Uzbekistan</p>
-            <p className="text-sm mt-3">
+              <a href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7" className="text-sm block">108 Amir Temur Avenue</a>
+              <a href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7" className="text-sm block">Tashkent 100200, Uzbekistan</a>
+            <a href="tel:+998908086383" className="text-sm mt-3 block">
               <strong>Phone:</strong> +998 90 808 63 83
-            </p>
-            <p className="text-sm">
+            </a>
+            <a href="mailto:fozilruzmamatoz@gmail.com" className="text-sm block">
               <strong>Email:</strong> fozilruzmamatoz@gmail.com
-            </p>
+            </a>
           </div>
 
           <div className="w-full sm:w-1/2 lg:w-1/4 pt-5 px-3 mb-8">
