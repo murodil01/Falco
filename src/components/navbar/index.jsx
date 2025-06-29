@@ -41,9 +41,14 @@ const Navbar = () => {
           </div>
 
           <nav className="hidden md:flex items-center gap-6 xl:gap-10 font-[700]">
-            <Link to="/" className={getLinkClass({ path: "/" })}>
+            <HashLink
+              smooth
+              to="/#"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className={getLinkClass({ path: "/" })}
+            >
               Home
-            </Link>
+            </HashLink>
             <Link to="/about" className={getLinkClass({ path: "/about" })}>
               About Us
             </Link>
@@ -53,11 +58,7 @@ const Navbar = () => {
             >
               Projects
             </Link>
-            <HashLink
-              smooth
-              to="/#contact"
-              className={getLinkClass({ path: "/", hash: "#contact" })}
-            >
+            <HashLink smooth to="/#contact" className="text-[#8e7d53]">
               Contact Us
             </HashLink>
           </nav>

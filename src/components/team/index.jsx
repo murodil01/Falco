@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Instagram } from "lucide-react";
+import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Bobur from "../../assets/Bobur.jpg";
 import Fozil from "../../assets/Fozil.jpg";
 import Mushtariy from "../../assets/Mushtariy.jpg";
@@ -10,39 +10,50 @@ const teamMembers = [
     role: "CEO",
     image: Fozil,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Pellentesque habitant morbi tristique.",
+      "Junior at Tashkent University of Infomation Technologies named after Muhammad al-Khwarizmi",
+    telegram: "@Foziljon_Ruzmamatov",
+    linkedin: "Not found",
+    instagram: "_mr.fozil_",
   },
   {
     name: "Mushtariybegim Muxammadova",
     role: "Representer",
     image: Mushtariy,
     description:
-      "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex.",
+      "Senior at Tashkent University of Infomation Technologies named after Muhammad al-Khwarizmi.",
+    telegram: "@Mushtariybegim_Otabekovna",
+    linkedin: "Not found",
+    instagram: "begim_otabekovna",
   },
   {
     name: "Behruz Nutfillayev",
     role: "AI expert",
     image: Behruz,
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+      "Alumnai of Tashkent University of Infomation Technologies named after Muhammad al-Khwarizmi",
+    telegram: "@bnutfilloyev",
+    linkedin: "Not found",
+    instagram: "Not found",
   },
   {
     name: "Allayoruv Boburjon",
-    role: "Team Leader",
+    role: "Backend developer",
     image: Bobur,
     description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Junior at Tashkent University of Infomation Technologies named after Muhammad al-Khwarizmi",
+    telegram: "@allayorovbobur21",
+    linkedin: "https://www.linkedin.com/in/bobur-allayorov-66b0622a6/",
+    instagram: "Not found",
   },
 ];
 
 const Team = () => {
   return (
-    <section id="team" className="py-20 bg-[#fafafa]">
+    <section id="team" className="pt-20 bg-[#fafafa]">
       <div className="w-[90%] mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900 mb-3">Team</h2>
         <p className="text-gray-600 text-lg">
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
+          Meet the dedicated part of our professionals whose collaboration, creativity, and commitment are driving our mission forward.
         </p>
       </div>
 
@@ -72,22 +83,36 @@ const Team = () => {
 
               <div className="pt-4 flex justify-center gap-4 text-white">
                 <a
-                  href="#"
+                  href={
+                    member.telegram !== "Not found"
+                      ? `https://t.me/${member.telegram.replace("@", "")}`
+                      : "#"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition"
                 >
-                  <Linkedin size={18} />
+                  <FaTelegramPlane size={18} />
                 </a>
                 <a
-                  href="#"
+                  href={member.linkedin !== "Not found" ? member.linkedin : "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 p-2 rounded-full hover:bg-blue-500 transition"
                 >
-                  <Twitter size={18} />
+                  <FaLinkedinIn size={18} />
                 </a>
                 <a
-                  href="#"
+                  href={
+                    member.instagram !== "Not found"
+                      ? `https://instagram.com/${member.instagram}`
+                      : "#"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 p-2 rounded-full hover:bg-pink-500 transition"
                 >
-                  <Instagram size={18} />
+                  <FaInstagram size={18} />
                 </a>
               </div>
             </div>

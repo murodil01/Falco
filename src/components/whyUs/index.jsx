@@ -28,7 +28,7 @@ const cardItems = [
 const WhyUs = () => {
   return (
     <section id="why-us" className="bg-[#fafafa] py-20">
-      <div className="w-[50%] mx-auto text-center mb-12" data-aos="fade-up">
+      <div className="w-[70%] mx-auto text-center mb-12" data-aos="fade-up">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Us</h2>
         <p className="text-gray-600 text-lg">
           At FALCO, we help people grow by matching their interests and goals

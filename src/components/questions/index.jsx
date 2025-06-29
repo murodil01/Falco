@@ -2,31 +2,34 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "Non consectetur a erat nam at lectus urna duis?",
+    question: "What is Falco Community?",
     answer:
-      "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.",
+      "Falco is a growing hybrid community that brings together talented and intelligent individuals across Uzbekistan, aged 15-30, to collaborate, innovate, and grow.",
   },
   {
-    question:
-      "Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?",
+    question: "Who can join Falco?",
     answer:
-      "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.",
+      "Anyone between the ages of 15-30 who is passionate, creative, and eager to solve real-world problems — especially in tech, design, science, and innovation.",
   },
   {
-    question: "Dolor sit amet consectetur adipiscing elit pellentesque?",
+    question: "What kind of activities does Falco organize?",
     answer:
-      "Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.",
+      "Currently, Falco hosts internal team meetings and project work. In the future, we plan to launch mentorship sessions, workshops, and public events depending on member engagement.",
   },
   {
-    question: "Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?",
+    question: "Is Falco free to join?",
     answer:
-      "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.",
+      "Yes, Falco will be free to join during its initial phase. Our mission is to make opportunity accessible to talented minds.",
   },
   {
-    question:
-      "Tempus quam pellentesque nec nam aliquam sem et tortor consequat?",
+    question: "What's the benefit of joining Falco?",
     answer:
-      "Molestie a iaculis at erat pellentesque adipiscing commodo. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.",
+      "You'll connect with other top talents in Uzbekistan, collaborate on meaningful projects, learn from peers, and possibly access future mentorship or startup opportunities.",
+  },
+  {
+    question: "How do I stay updated with Falco's activities?",
+    answer:
+      "Follow us on [Instagram/Telegram/etc.] and join our official channels to get updates on events, openings, and new initiatives.",
   },
 ];
 
@@ -48,9 +51,8 @@ const Questions = () => {
                 <strong className="text-[#8e7d53]">Questions</strong>
               </h3>
               <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
-                aute irure dolor in reprehenderit
+                You can find answers to frequently asked questions below or
+                contact us directly for more detailed information.
               </p>
             </div>
           </div>
