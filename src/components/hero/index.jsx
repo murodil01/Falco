@@ -18,7 +18,7 @@ const Hero = () => {
           </button>
         </div>
 
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-end">
           <img
             src={hero2}
             alt="Falco Illustration"

@@ -1,3 +1,5 @@
+import our from "../../assets/our.jpg"
+
 const cardItems = [
   {
     number: "01",
@@ -63,7 +65,7 @@ const WhyUs = () => {
 
         <div className="lg:w-5/12" data-aos="zoom-out" data-aos-delay="300">
           <img
-            src="https://i.vuzopedia.ru/storage/app/uploads/public/65e/6d0/25a/65e6d025aff7e170876633.jpeg"
+            src={our}
             alt="Why Us"
             className="rounded-xl w-full object-cover shadow-lg"
           />
