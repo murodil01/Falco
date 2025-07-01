@@ -13,10 +13,10 @@ const duplicatedLogos = [...partnerLogos, ...partnerLogos];
 const Partners = () => {
   const settings = {
     infinite: true,
-    speed: 5000,
+    speed: 5000, 
     autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
+    autoplaySpeed: 1, 
+    cssEase: "linear", 
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: false,
