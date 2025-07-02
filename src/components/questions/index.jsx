@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const faqs = [
   {
@@ -40,11 +42,15 @@ const Questions = () => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section id="faq" className="py-20 bg-white">
       <div className="w-[83%] mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3" data-aos="fade-up" data-aos-duration="1000">
             <div>
               <h3 className="text-3xl font-bold text-[#09291b] mb-4">
                 <span>Frequently Asked </span>
@@ -57,7 +63,12 @@ const Questions = () => {
             </div>
           </div>
 
-          <div className="lg:w-2/3">
+          <div
+            className="lg:w-2/3"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <div className="space-y-4">
               {faqs.map((item, i) => (
                 <div

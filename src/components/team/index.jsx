@@ -1,4 +1,8 @@
+import { useEffect } from "react";
 import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Bobur from "../../assets/Bobur.jpg";
 import Fozil from "../../assets/Fozil.jpg";
 import Mushtariy from "../../assets/Mushtariy.jpg";
@@ -48,12 +52,17 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section id="team" className="pt-20 bg-[#fafafa]">
       <div className="w-[90%] mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900 mb-3">Team</h2>
         <p className="text-gray-600 text-lg">
-          Meet the dedicated part of our professionals whose collaboration, creativity, and commitment are driving our mission forward.
+          Meet the dedicated part of our professionals whose collaboration,
+          creativity, and commitment are driving our mission forward.
         </p>
       </div>
 
@@ -62,6 +71,8 @@ const Team = () => {
           <div
             key={index}
             className="bg-white shadow-md rounded-2xl overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
           >
             <div className="relative w-full h-[400px]">
               <img
