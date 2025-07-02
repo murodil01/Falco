@@ -4,7 +4,7 @@ const SplashScreen = () => {
   const [hide, setHide] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setHide(true), 1400);
+    const timer = setTimeout(() => setHide(true), 1600); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -19,9 +19,9 @@ const SplashScreen = () => {
         style={{
           fontFamily: `"Pragmatica Extended", sans-serif`,
           backgroundImage: "linear-gradient(to right, #8e7d53, transparent)",
-          animation: "shimmerOnce 1s linear forwards",
           backgroundSize: "200% auto",
-          backgroundPosition: "-100% 0",
+          backgroundPosition: "0% 0",
+          animation: "shimmerFade 1.2s ease-in-out forwards",
         }}
       >
         FALCO
@@ -29,12 +29,17 @@ const SplashScreen = () => {
 
       <style>
         {`
-          @keyframes shimmerOnce {
+          @keyframes shimmerFade {
             0% {
               background-position: -100% 0;
+              opacity: 1;
+            }
+            50% {
+              opacity: 1;
             }
             100% {
               background-position: 100% 0;
+              opacity: 0;
             }
           }
         `}

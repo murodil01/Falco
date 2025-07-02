@@ -72,7 +72,7 @@ const About = () => {
                   />
                   <div>
                     <h3 className="text-[#09291b] font-bold text-base">
-                      Mario Smith
+                      Foziljon Ruzmamatov
                     </h3>
                     <p className="text-gray-600 text-sm">CEO & Founder</p>
                   </div>
