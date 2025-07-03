@@ -1,4 +1,4 @@
-import hero2 from "../../assets/hero2.png";
+import FALCO from "../../assets/FALCO.png";
 
 const Hero = () => {
   return (
@@ -20,9 +20,10 @@ const Hero = () => {
 
         <div className="flex-1 flex justify-end">
           <img
-            src={hero2}
+            src={FALCO}
             alt="Falco Illustration"
-            className="w-full max-w-sm md:max-w-md lg:max-w-lg object-contain rounded-2xl"
+            loading="lazy"
+            className="!w-[430px] h-auto md:w-[400px] lg:w-[500px] max-h-[500px] object-contain rounded-2xl"
           />
         </div>
       </div>
@@ -31,19 +32,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{
-  /* <div className="flex-1">
-          <div className="w-full max-w-md md:max-w-lg aspect-video mx-auto rounded-2xl overflow-hidden shadow-lg">
-            {/<iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/dC8yyyDbPaI?rel=0&modestbranding=1"
-              title="Falco Video"
-              frameBorder="0"
-              allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-            <img src={hero} alt="Image" className=""/>
-          </div>
-        </div>*/
-}
