@@ -4,7 +4,7 @@ const SplashScreen = () => {
   const [hide, setHide] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setHide(true), 1600); 
+    const timer = setTimeout(() => setHide(true), 1150); 
     return () => clearTimeout(timer);
   }, []);
 

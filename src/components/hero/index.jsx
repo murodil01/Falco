@@ -19,12 +19,14 @@ const Hero = () => {
         </div>
 
         <div className="flex-1 flex justify-end">
-          <img
-            src={FALCO}
-            alt="Falco Illustration"
-            loading="lazy"
-            className="!w-[430px] h-auto md:w-[400px] lg:w-[500px] max-h-[500px] object-contain rounded-2xl"
-          />
+          <div className="w-[280px] md:w-[350px] lg:w-[400px] max-h-[500px] overflow-hidden rounded-2xl">
+            <img
+              src={FALCO}
+              alt="Falco Illustration"
+              loading="lazy"
+              className="w-full h-auto object-cover rounded-2xl transition-transform duration-300 ease-in-out hover:scale-110"
+            />
+          </div>
         </div>
       </div>
     </div>
