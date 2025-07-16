@@ -33,11 +33,13 @@ const Navbar = () => {
       <div className="max-w-[1400px] mx-auto w-full px-4 sm:px-6 lg:px-12">
         <div className="flex justify-between items-center py-[20px]">
           <div className="flex items-center gap-3">
-            <img
-              src={falcotext}
-              alt="Falco Logo"
-              className="max-h-12 w-auto object-contain"
-            />
+            <a href="#">
+              <img
+                src={falcotext}
+                alt="Falco Logo"
+                className="max-h-12 w-auto object-contain"
+              />
+            </a>
           </div>
 
           <nav className="hidden md:flex items-center gap-6 xl:gap-10 font-[700]">

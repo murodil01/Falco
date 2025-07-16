@@ -5,6 +5,8 @@ import {
   BsInstagram,
   BsLinkedin,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import falcologo from "../../assets/falcoLogo.png";
 
 const Footer = () => {
@@ -16,8 +18,18 @@ const Footer = () => {
             <div className="w-[80px] mb-4">
               <img src={falcologo} alt="Image" className="w-20 h-auto" />
             </div>
-              <a href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7" className="text-sm block">108 Amir Temur Avenue</a>
-              <a href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7" className="text-sm block">Tashkent 100200, Uzbekistan</a>
+            <a
+              href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7"
+              className="text-sm block"
+            >
+              108 Amir Temur Avenue
+            </a>
+            <a
+              href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7"
+              className="text-sm block"
+            >
+              Tashkent 100200, Uzbekistan
+            </a>
             <a href="tel:+998908086383" className="text-sm mt-3 block">
               <strong>Phone:</strong> +998 90 808 63 83
             </a>
@@ -29,19 +41,39 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-1/4 pt-5 px-3 mb-8">
             <h4 className="text-lg font-semibold mb-3">Useful Links</h4>
             <ul className="space-y-2 text-sm">
-              {["Home", "About us", "Services", "Terms of service"].map(
-                (item, i) => (
+              {["Home", "About us", "Projects", "Team"].map((item, i) => {
+                const routeMap = {
+                  "Home": "/",
+                  "About us": "/about",
+                  "Projects": "/projects",
+                  "Team": "/#team",
+                };
+
+                const path = routeMap[item];
+                const isHash = path.includes("#"); 
+
+                return (
                   <li key={i} className="flex items-center gap-2">
                     <BsChevronRight />
-                    <a
-                      href="#"
-                      className="hover:text-[#8e7d53] transition-colors duration-200"
-                    >
-                      {item}
-                    </a>
+                    {isHash ? (
+                      <HashLink
+                        smooth
+                        to={path}
+                        className="hover:text-[#8e7d53] transition-colors duration-200"
+                      >
+                        {item}
+                      </HashLink>
+                    ) : (
+                      <Link
+                        to={path}
+                        className="hover:text-[#8e7d53] transition-colors duration-200"
+                      >
+                        {item}
+                      </Link>
+                    )}
                   </li>
-                )
-              )}
+                );
+              })}
             </ul>
           </div>
 
@@ -73,17 +105,15 @@ const Footer = () => {
               Follow us on social media to stay updated.
             </p>
             <div className="flex gap-4 text-xl">
-              {[BsTwitterX, BsFacebook, BsInstagram, BsLinkedin].map(
-                (Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="hover:text-[#8e7d53] transition-colors duration-200"
-                  >
-                    <Icon />
-                  </a>
-                )
-              )}
+              {[BsTwitterX, BsFacebook, BsInstagram, BsLinkedin].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="hover:text-[#8e7d53] transition-colors duration-200"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
         </div>
