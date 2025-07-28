@@ -58,7 +58,7 @@ const Team = () => {
 
   return (
     <section id="team" className="pt-20 bg-[#fafafa]">
-      <div className="w-[90%] mx-auto text-center mb-12">
+      <div className="max-w-[1350px] w-full m-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900 mb-3">Team</h2>
         <p className="text-gray-600 text-lg">
           Meet the dedicated part of our professionals whose collaboration,
@@ -66,7 +66,7 @@ const Team = () => {
         </p>
       </div>
 
-      <div className="w-[84%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-[1280px] w-full m-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {teamMembers.map((member, index) => (
           <div
             key={index}

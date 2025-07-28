@@ -1,5 +1,5 @@
 import Navbar from "../../components/navbar";
-import Footer from "../../components/footer"
+import Footer from "../../components/footer";
 
 const projects = [
   {
@@ -42,33 +42,41 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div>
-      <Navbar/>
-      <div className="w-[90%] mx-auto pt-[150px] py-16" id="projects">
-        <h2 className="text-3xl md:text-4xl font-bold text-center">
-          Our Projects
-        </h2>
+    <div className="bg-[#fafafa]">
+      <Navbar />
 
-        <div className="flex flex-wrap justify-center gap-6 mt-[40px]">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden w-full sm:w-[48%] lg:w-[30%]"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-52 object-cover"
-              />
-              <div className="p-5">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-base">{project.description}</p>
+      <main className="pt-[150px] pb-20 px-4" id="projects">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-[#09291b]">
+            Our Projects
+          </h2>
+
+          <div className="flex flex-wrap justify-center gap-6 mt-12">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden w-full sm:w-[48%] lg:w-[30%]"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-52 object-cover"
+                />
+                <div className="p-5">
+                  <h3 className="text-xl font-semibold mb-2 text-[#09291b]">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-base">
+                    {project.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-      <Footer/>
+      </main>
+
+      <Footer />
     </div>
   );
 };

@@ -48,7 +48,7 @@ const Questions = () => {
 
   return (
     <section id="faq" className="py-20 bg-white">
-      <div className="w-[83%] mx-auto">
+      <div className="max-w-[1270px] w-full m-auto">
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/3" data-aos="fade-up" data-aos-duration="1000">
             <div>

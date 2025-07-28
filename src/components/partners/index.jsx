@@ -13,10 +13,10 @@ const duplicatedLogos = [...partnerLogos, ...partnerLogos];
 const Partners = () => {
   const settings = {
     infinite: true,
-    speed: 5000, 
+    speed: 5000,
     autoplay: true,
-    autoplaySpeed: 1, 
-    cssEase: "linear", 
+    autoplaySpeed: 1,
+    cssEase: "linear",
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: false,
@@ -40,11 +40,11 @@ const Partners = () => {
       <Slider {...settings} className="mt-8">
         {duplicatedLogos.map((logo, index) => (
           <div key={index}>
-            <div className="h-[180px] w-full flex items-center justify-center">
+            <div className="aspect-[3/2] flex items-center justify-center">
               <img
                 src={logo}
                 alt={`Partner ${index + 1}`}
-                className="h-auto w-[45%] object-contain"
+                className="w-[60%] sm:w-[50%] md:w-[45%] object-contain"
               />
             </div>
           </div>

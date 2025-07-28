@@ -3,7 +3,7 @@ import FALCO from "../../assets/FALCO.png";
 const Hero = () => {
   return (
     <div className="bg-[#fafafa] min-h-screen flex items-center pt-[120px] md:pt-[100px]">
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="max-w-[1350px] w-full m-auto px-4 sm:px-6 lg:px-15 flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold text-[#09291b] mb-4 leading-tight">
             Welcome to <span className="text-[#8e7d53]">Falco</span> Community
