@@ -9,7 +9,7 @@ const About = () => {
       <Navbar />
 
       <main className="pt-[150px] pb-20 px-4">
-        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1350px] mx-auto px-5">
           <h1 className="text-4xl md:text-6xl font-bold text-[#09291b] mb-4 text-center">
             About
           </h1>
@@ -40,11 +40,7 @@ const About = () => {
                 strategist, or creative thinker, Falco is the launchpad for your
                 growth and impact.
               </p>
-              <p className="text-lg md:text-xl text-gray-600 mb-6">
-                Led by passionate individuals who believe in community-driven
-                innovation, Falco is paving the way for a brighter future—one
-                project, one idea, and one talent at a time.
-              </p>
+              
 
               <div className="my-9">
                 <nav className="flex flex-col sm:flex-row items-start gap-12">

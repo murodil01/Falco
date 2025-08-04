@@ -1,46 +1,55 @@
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
+import Agroboost from "../../assets/about/Agroboost.png";
+import FoodQuest from "../../assets/about/FoodQuest.png";
+import FreshLine from "../../assets/about/FreshLine.png";
+import Robo3 from "../../assets/about/Robo3.png";
+import coming from "../../assets/about/coming.jpg";
+import { useEffect } from "react";
 
 const projects = [
   {
     id: 1,
-    title: "Falco Platform",
-    description: "Empowering communities through tech and collaboration.",
-    image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
+    title: "Agroboost",
+    description:
+      "Scans agricultural lands using drones to detect issues and optimize crop health.",
+    image: Agroboost,
   },
   {
     id: 2,
-    title: "Falco App",
-    description: "A mobile app to connect and grow together.",
-    image: "https://images.pexels.com/photos/6078120/pexels-photo-6078120.jpeg",
+    title: "FoodQuest",
+    description:
+      "A platform that reduces food waste by offering surplus meals from restaurants and cafes at discounted prices.",
+    image: FoodQuest,
   },
   {
     id: 3,
-    title: "Community Portal",
-    description: "Central hub for all community members.",
-    image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
+    title: "Fresh Line",
+    description:
+      "Connects farmers directly with consumers, eliminating middlemen and ensuring fair trade.",
+    image: FreshLine,
   },
   {
     id: 4,
-    title: "Design System",
-    description: "Reusable components for fast UI development.",
-    image: "https://images.pexels.com/photos/6476592/pexels-photo-6476592.jpeg",
+    title: "RoboContest.uz",
+    description:
+      "An educational platform for robotics competitions and hands-on learning experiences.",
+    image: Robo3,
   },
   {
     id: 5,
-    title: "Mentorship Program",
-    description: "Helping others grow by sharing experience.",
-    image: "https://images.pexels.com/photos/1181308/pexels-photo-1181308.jpeg",
-  },
-  {
-    id: 6,
-    title: "Open Source Hub",
-    description: "Join us in building open and inclusive tools.",
-    image: "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg",
+    title: "Coming",
+    description:
+      "Reserved for upcoming innovative projects and new initiatives.",
+    image: coming,
   },
 ];
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-[#fafafa]">
       <Navbar />
